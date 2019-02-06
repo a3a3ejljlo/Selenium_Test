@@ -118,8 +118,8 @@ public class Test {
         //11.	Листаем страницу вниз, выбираем третий снизу продукт, открываем его.
         log.info("Листаем страницу вниз, выбираем третий снизу продукт, открываем его.");
         Thread.sleep(300);
-        wait.until(ExpectedConditions.elementToBeClickable(driver.findElement(By.xpath("//div[@data-position-index = '0']//a[@class='show-popover ec-price-item-link']"))));
-        executor.executeScript("arguments[0].click();", driver.findElement(By.xpath("//div[@data-position-index = '0']//a[@class='show-popover ec-price-item-link']")));
+        wait.until(ExpectedConditions.elementToBeClickable(driver.findElement(By.xpath("//div[@data-position-index][last()-2]//a[@class='show-popover ec-price-item-link']"))));
+        executor.executeScript("arguments[0].click();", driver.findElement(By.xpath("//div[@data-position-index][last()-2]//a[@class='show-popover ec-price-item-link']")));
 
         //12.	Повторяем пункт 6.
         log.info("Повторяем пункт 6.");
